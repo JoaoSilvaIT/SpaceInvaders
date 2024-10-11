@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity parity_check is
+    port (
+        data_sdx : in std_logic;
+        sclk     : in std_logic;
+        init     : in std_logic;
+        err      : out std_logic
+    );
+end parity_check;
+
+architecture Structural of parity_check is
+    signal parity_result : std_logic;
+begin
+    process (sclk)
+    begin
+        if rising_edge(sclk) then
+            if init = '1' then
+                parity_result <= '0';
+            end if;
+				
+				parity_result <= parity_result xor data_sdx;
+        end if;
+    end process;
+	 
+
+    err <= parity_result;
+
+end Structural;

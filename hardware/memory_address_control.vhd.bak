@@ -1,0 +1,78 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity memory_address_control is
+	port (
+		clk: in std_logic;
+		putGet: in std_logic;
+		incPut: in std_logic;
+		incGet: in std_logic;
+		clear: in std_logic;
+		full: out std_logic;
+		empty: out std_logic;
+		address: out std_logic_vector(2 downto 0)
+	);
+end memory_address_control;
+
+
+architecture structural of memory_address_control is
+
+	component reg3 is
+		port (
+			CLK : in std_logic;
+			D : IN std_logic_VECTOR(2 downto 0);
+			E : IN std_logic;
+			R : in std_logic;
+			Q : out std_logic_VECTOR(2 downto 0)
+		);
+   end component;
+	
+	component adder3 is
+		port (
+			A: in std_logic_vector(2 downto 0);
+			B: in std_logic_vector(2 downto 0);
+			Cin : in std_logic;
+			S: out std_logic_vector(2 downto 0);
+			Cout: out std_logic
+		);
+	end component;
+	
+	component comparator is
+		port (
+			A : in std_logic_vector(3 downto 0);
+			B : in std_logic_vector(3 downto 0);
+			TC : out std_logic
+		);
+	end component;
+	
+	signal put, get, nextPut, nextGet : std_logic_vector(2 downto 0);
+	signal extNextPut, extPut, extGet: std_logic_vector(3 downto 0);
+
+begin
+
+	U_adder_put: adder3
+	port map (A => "001", B => put, Cin => '0', S => nextPut);
+	
+	U_adder_get: adder3
+	port map (A => "001", B => get, Cin => '0', S => nextGet);
+	
+	extNextPut <= '0' & nextPut;
+	extPut <= '0' & put;
+	extGet <= '0' & get;
+	
+	U_comparator_empty: comparator
+	port map (A => extPut, B => extGet, TC => empty);
+	
+	U_comparator_full: comparator
+	port map (A => extPut, B => extGet, TC => full);
+	
+	U_reg_put: reg3
+	port map (CLK => CLK, D => nextPut, E => incPut, Q => put, R => clear);
+	
+	U_reg_get: reg3
+	port map (CLK => CLK, D => nextGet, E => incGet, Q => get, R => clear);
+	
+	address <= get when putGet = '1' else get;
+	
+
+end structural;

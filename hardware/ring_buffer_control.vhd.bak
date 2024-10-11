@@ -1,0 +1,72 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ring_buffer_control is
+	port(
+		clk: in std_logic;
+		dataAvailable: in std_logic;
+		clearToSend: in std_logic;
+		full: in std_logic;
+		empty: in std_logic;
+		writeRam: out std_logic;
+		incPut: out std_logic;
+		incGet: out std_logic;
+		putGet: out std_logic;
+		writeReg: out std_logic;
+		dataAck: out std_logic
+	);
+end ring_buffer_control;
+
+architecture Behavioral of ring_buffer_control is
+
+	type STATE_TYPE is (STATE_IDLE, STATE_GET, STATE_PUT);
+	signal CurrentState, NextState : STATE_TYPE;
+
+begin
+	
+	-- Flip-Flop's 
+	CurrentState <= NextState when rising_edge(clk);
+	
+	-- Generate Next State 
+	GenerateNextState: process (CurrentState, dataAvailable, clearToSend, full, empty)
+	begin
+		case CurrentState is
+			when STATE_IDLE => 
+				if (full = '1') then
+					if (clearToSend = '1') then
+						NextState <= STATE_GET;
+					else
+						NextState <= STATE_IDLE;
+					end if;
+				elsif (dataAvailable = '1') then
+					NextState <= STATE_PUT;
+				elsif (empty = '1') then
+					NextState <= STATE_IDLE;
+				elsif (clearToSend = '1') then
+					NextState <= STATE_GET;
+				else
+					NextState <= STATE_IDLE;
+				end if;
+					
+			when STATE_GET =>
+				NextState <= STATE_IDLE;
+				
+			when STATE_PUT =>
+				if (dataAvailable = '1') then
+					NextState <= STATE_PUT;
+				else
+					NextState <= STATE_IDLE;
+				end if;
+				
+		end case;
+	end process;
+	
+	--Generate outputs
+	writeRam <= '1' when CurrentState = STATE_PUT else '0';
+	putGet <= '1' when CurrentState = STATE_PUT else '0';
+	incPut <= '1' when CurrentState = STATE_PUT else '0';
+	dataAck <= '1' when CurrentState = STATE_PUT else '0';
+	writeReg <= '1' when CurrentState = STATE_GET else '0';
+	incGet <= '1' when CurrentState = STATE_GET else '0';
+	
+end Behavioral;
