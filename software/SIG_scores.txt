@@ -1,0 +1,10 @@
+162;AAAAA
+107;Pedro
+49;Diego
+48;BCHAA
+45;EDD
+44;Nuno
+28;Rui
+21;David
+11;Rogerio
+1;A
