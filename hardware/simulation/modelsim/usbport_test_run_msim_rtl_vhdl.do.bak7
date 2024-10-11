@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/TopLevel.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_board_reader.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_decode.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_scan.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_control.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/multiplexor.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/decoder.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/counter.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/FFD.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/reg.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/comparador.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/adder.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/full_adder.vhd}
+vcom -93 -work work {C:/ISEL/LIC/usbport_test/output_files/clk_div.vhd}
+

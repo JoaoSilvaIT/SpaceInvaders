@@ -1,0 +1,842 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do usbport_test_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_board_reader.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:38 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/key_board_reader.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity key_board_reader
+# -- Compiling architecture Structural of key_board_reader
+# End time: 15:36:38 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_decode.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:38 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/key_decode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity key_decode
+# -- Compiling architecture Structural of key_decode
+# End time: 15:36:38 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_scan.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:38 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/key_scan.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity key_scan
+# -- Compiling architecture Structural of key_scan
+# End time: 15:36:39 on Jun 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/key_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:39 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/key_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity key_control
+# -- Compiling architecture behavioral of key_control
+# End time: 15:36:39 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/multiplexor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:39 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/multiplexor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexor
+# -- Compiling architecture Behavioral of multiplexor
+# End time: 15:36:39 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/decoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:39 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder
+# -- Compiling architecture Behavioral of decoder
+# End time: 15:36:39 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:39 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter
+# -- Compiling architecture Structural of counter
+# End time: 15:36:39 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/FFD.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:39 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/FFD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FFD
+# -- Compiling architecture Behavioral of FFD
+# End time: 15:36:39 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:39 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture Structural of reg
+# End time: 15:36:40 on Jun 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/comparador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:40 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/comparador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparator
+# -- Compiling architecture Behavioral of comparator
+# End time: 15:36:40 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:40 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder
+# -- Compiling architecture Structural of adder
+# End time: 15:36:40 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/full_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:40 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/full_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture Behavioral of full_adder
+# End time: 15:36:40 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/output_files/clk_div.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:40 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/output_files/clk_div.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_div
+# -- Compiling architecture bhv of clk_div
+# End time: 15:36:40 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/output_buffer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:40 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/output_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity output_buffer
+# -- Compiling architecture Structural of output_buffer
+# End time: 15:36:40 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/buffer_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:40 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/buffer_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity output_buffer_control
+# -- Compiling architecture Behavioral of output_buffer_control
+# End time: 15:36:41 on Jun 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/ring_buffer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:41 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/ring_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ring_buffer
+# -- Compiling architecture Structural of ring_buffer
+# End time: 15:36:41 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/ring_buffer_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:41 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/ring_buffer_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ring_buffer_control
+# -- Compiling architecture Behavioral of ring_buffer_control
+# End time: 15:36:41 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/RAM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:41 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity RAM
+# -- Compiling architecture behavioral of RAM
+# End time: 15:36:41 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/memory_address_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:41 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/memory_address_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memory_address_control
+# -- Compiling architecture structural of memory_address_control
+# End time: 15:36:41 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/adder3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:41 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/adder3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder3
+# -- Compiling architecture Structural of adder3
+# End time: 15:36:41 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/reg3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:41 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/reg3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg3
+# -- Compiling architecture Structural of reg3
+# End time: 15:36:42 on Jun 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/lcd_dispatcher.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:42 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/lcd_dispatcher.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity lcd_dispatcher
+# -- Compiling architecture Behavioral of lcd_dispatcher
+# End time: 15:36:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/lcd_serial_receiver.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:42 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/lcd_serial_receiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity lcd_serial_receiver
+# -- Compiling architecture Structural of lcd_serial_receiver
+# End time: 15:36:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/parity_check.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:42 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/parity_check.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity parity_check
+# -- Compiling architecture Structural of parity_check
+# End time: 15:36:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/shift_reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:42 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/shift_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift_reg
+# -- Compiling architecture behavioral of shift_reg
+# End time: 15:36:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/score_display.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:42 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/score_display.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity score_display
+# -- Compiling architecture structural of score_display
+# End time: 15:36:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/dec2hex.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:42 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/dec2hex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec2hex
+# -- Compiling architecture structural of dec2hex
+# End time: 15:36:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/ffd_score_display.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:43 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/ffd_score_display.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ffd_score_display
+# -- Compiling architecture logicfunction of ffd_score_display
+# End time: 15:36:43 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/dec_3_8.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:43 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/dec_3_8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec_3_8
+# -- Compiling architecture structural of dec_3_8
+# End time: 15:36:43 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/score_dispatcher.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:43 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/score_dispatcher.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity score_dispatcher
+# -- Compiling architecture Behavioral of score_dispatcher
+# End time: 15:36:43 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/serial_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:43 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/serial_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_control
+# -- Compiling architecture Behavioral of serial_control
+# End time: 15:36:43 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/score_serial_receiver.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:43 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/score_serial_receiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity score_serial_receiver
+# -- Compiling architecture Structural of score_serial_receiver
+# End time: 15:36:43 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/lcd_serial_controller.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:43 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/lcd_serial_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity lcd_serial_controller
+# -- Compiling architecture Structural of lcd_serial_controller
+# End time: 15:36:44 on Jun 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/score_serial_controller.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:44 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/score_serial_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity score_serial_controller
+# -- Compiling architecture Structural of score_serial_controller
+# End time: 15:36:44 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/space_invaders.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:44 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/space_invaders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity space_invaders
+# -- Compiling architecture Structural of space_invaders
+# End time: 15:36:44 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/ISEL/LIC/usbport_test/shift_reg_7.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:44 on Jun 26,2024
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/usbport_test/shift_reg_7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift_reg_7
+# -- Compiling architecture behavioral of shift_reg_7
+# End time: 15:36:44 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work C:/ISEL/LIC/usbport_test/ring_buffer_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:37:07 on Jun 26,2024
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/usbport_test/ring_buffer_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ring_buffer_tb
+# -- Compiling architecture behavioral of ring_buffer_tb
+# End time: 15:37:07 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ring_buffer_tb
+# vsim work.ring_buffer_tb 
+# Start time: 15:37:12 on Jun 26,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ring_buffer_tb(behavioral)
+# Loading work.ring_buffer(structural)
+# Loading work.ring_buffer_control(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ram(behavioral)
+# Loading work.memory_address_control(structural)
+# Loading work.adder3(structural)
+# Loading work.full_adder(behavioral)
+# Loading work.reg3(structural)
+# Loading work.ffd(behavioral)
+# Loading work.adder(structural)
+# Loading work.reg(structural)
+# Loading work.comparator(behavioral)
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/dataIn_tb \
+sim:/ring_buffer_tb/dataOut_tb \
+sim:/ring_buffer_tb/clk_tb \
+sim:/ring_buffer_tb/dataAvailable_tb \
+sim:/ring_buffer_tb/clearToSend_tb \
+sim:/ring_buffer_tb/clear_tb \
+sim:/ring_buffer_tb/writeReg_tb \
+sim:/ring_buffer_tb/dataAck_tb
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /ring_buffer_tb/UUT/U_ram
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/clk \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/putGet \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/incPut \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/incGet \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/clear \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/full \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/empty \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/address \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/nextAddress \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/getAddress \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/putAddress \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/size3 \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/nextSize \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/size \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/incOrDec
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/U_ram/ram
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/U_ram/address
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/clear \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/clk \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/dataAvailable \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/clearToSend \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/full \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/empty \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/writeRam \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/incPut \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/incGet \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/putGet \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/writeReg \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/dataAck
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/clk \
+sim:/ring_buffer_tb/UUT/dataIn \
+sim:/ring_buffer_tb/UUT/dataAvailable \
+sim:/ring_buffer_tb/UUT/clearToSend \
+sim:/ring_buffer_tb/UUT/clear \
+sim:/ring_buffer_tb/UUT/dataOut \
+sim:/ring_buffer_tb/UUT/writeReg \
+sim:/ring_buffer_tb/UUT/dataAck
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /ring_buffer_tb/UUT/U_ram
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/usbport_test/ring_buffer_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:48:33 on Jun 26,2024
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/usbport_test/ring_buffer_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ring_buffer_tb
+# -- Compiling architecture behavioral of ring_buffer_tb
+# End time: 15:48:33 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ring_buffer_tb
+# End time: 15:48:38 on Jun 26,2024, Elapsed time: 0:11:26
+# Errors: 0, Warnings: 8
+# vsim work.ring_buffer_tb 
+# Start time: 15:48:38 on Jun 26,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ring_buffer_tb(behavioral)
+# Loading work.ring_buffer(structural)
+# Loading work.ring_buffer_control(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ram(behavioral)
+# Loading work.memory_address_control(structural)
+# Loading work.adder3(structural)
+# Loading work.full_adder(behavioral)
+# Loading work.reg3(structural)
+# Loading work.ffd(behavioral)
+# Loading work.adder(structural)
+# Loading work.reg(structural)
+# Loading work.comparator(behavioral)
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/dataIn_tb \
+sim:/ring_buffer_tb/dataOut_tb \
+sim:/ring_buffer_tb/clk_tb \
+sim:/ring_buffer_tb/dataAvailable_tb \
+sim:/ring_buffer_tb/clearToSend_tb \
+sim:/ring_buffer_tb/clear_tb \
+sim:/ring_buffer_tb/writeReg_tb \
+sim:/ring_buffer_tb/dataAck_tb
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/writeRam \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/incPut \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/incGet \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/putGet \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/writeReg \
+sim:/ring_buffer_tb/UUT/U_ring_buffer_control/dataAck
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/U_ram/ram
+add wave -position insertpoint  \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/full \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/empty \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/address \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/nextAddress \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/getAddress \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/putAddress \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/size3 \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/nextSize \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/size \
+sim:/ring_buffer_tb/UUT/U_memory_address_control/incOrDec
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /ring_buffer_tb/UUT/U_ram
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /ring_buffer_tb/UUT/U_ram
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 15:56:35 on Jun 26,2024, Elapsed time: 0:07:57
+# Errors: 0, Warnings: 4

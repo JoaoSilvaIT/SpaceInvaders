@@ -1,0 +1,766 @@
+Analysis & Synthesis report for usbport_test
+Tue Jul 02 15:29:43 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Parameter Settings for User Entity Instance: key_board_reader:U_key_board_reader|key_decode:U_key_decode|clk_div:U_clk_div
+  6. Parameter Settings for User Entity Instance: key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|RAM:U_ram
+  7. Parameter Settings for User Entity Instance: UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst
+  8. Port Connectivity Checks: "score_display:U_score_display|ffd_score_display:clear_reg"
+  9. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:5:out_reg"
+ 10. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:5:in_reg"
+ 11. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:4:out_reg"
+ 12. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:4:in_reg"
+ 13. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:3:out_reg"
+ 14. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:3:in_reg"
+ 15. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:2:out_reg"
+ 16. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:2:in_reg"
+ 17. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:1:out_reg"
+ 18. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:1:in_reg"
+ 19. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:0:out_reg"
+ 20. Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:0:in_reg"
+ 21. Port Connectivity Checks: "score_display:U_score_display|dec_3_8:decoder"
+ 22. Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver|comparator:U_comparator_parity"
+ 23. Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver|comparator:U_comparator_data"
+ 24. Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver|counter:U_counter"
+ 25. Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_dispatcher:U_score_dispatcher"
+ 26. Port Connectivity Checks: "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|comparator:U_comparator_parity"
+ 27. Port Connectivity Checks: "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|comparator:U_comparator_data"
+ 28. Port Connectivity Checks: "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|counter:U_counter"
+ 29. Port Connectivity Checks: "UsbPort:U_usb_port"
+ 30. Port Connectivity Checks: "key_board_reader:U_key_board_reader|output_buffer:U_output_buffer|reg:U_reg"
+ 31. Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|adder3:U_putAddress"
+ 32. Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|comparator:U_comparator_full"
+ 33. Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|comparator:U_comparator_empty"
+ 34. Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|reg:U_size"
+ 35. Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|adder:U_nextSize"
+ 36. Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|adder3:U_nextAddress"
+ 37. Port Connectivity Checks: "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|comparator:U_comparator"
+ 38. Port Connectivity Checks: "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|adder:U_adder"
+ 39. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Tue Jul 02 15:29:43 2024           ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; usbport_test                                ;
+; Top-level Entity Name              ; space_invaders                              ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                            ; space_invaders     ; usbport_test       ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; State Machine Processing                                         ; Gray               ; Auto               ;
+; Safe State Machine                                               ; On                 ; Off                ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_board_reader:U_key_board_reader|key_decode:U_key_decode|clk_div:U_clk_div ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; div            ; 10000 ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|RAM:U_ram ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; address_width  ; 3     ; Signed Integer                                                                              ;
+; data_width     ; 4     ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst ;
++-------------------------+------------------+----------------------------------------------+
+; Parameter Name          ; Value            ; Type                                         ;
++-------------------------+------------------+----------------------------------------------+
+; sld_auto_instance_index ; YES              ; String                                       ;
+; sld_instance_index      ; 0                ; Signed Integer                               ;
+; sld_ir_width            ; 8                ; Signed Integer                               ;
+; sld_sim_n_scan          ; 0                ; Signed Integer                               ;
+; sld_sim_action          ; UNUSED           ; String                                       ;
+; sld_sim_total_length    ; 0                ; Signed Integer                               ;
+; lpm_type                ; sld_virtual_jtag ; String                                       ;
+; lpm_hint                ; UNUSED           ; String                                       ;
++-------------------------+------------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|ffd_score_display:clear_reg" ;
++-------+-------+----------+------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                    ;
++-------+-------+----------+------------------------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                               ;
+; set   ; Input ; Info     ; Stuck at GND                                               ;
++-------+-------+----------+------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:5:out_reg" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:5:in_reg" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                              ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:4:out_reg" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:4:in_reg" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                              ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:3:out_reg" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:3:in_reg" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                              ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:2:out_reg" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:2:in_reg" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                              ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:1:out_reg" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:1:in_reg" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                              ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:0:out_reg" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|reg:\circuit_gen:0:in_reg" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; r    ; Input ; Info     ; Stuck at GND                                              ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_display:U_score_display|dec_3_8:decoder" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                    ;
++------+-------+----------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver|comparator:U_comparator_parity" ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                       ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; a[2..0] ; Input ; Info     ; Stuck at GND                                                                                                                  ;
+; a[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                  ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver|comparator:U_comparator_data" ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                     ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; a[2..0] ; Input ; Info     ; Stuck at VCC                                                                                                                ;
+; a[3]    ; Input ; Info     ; Stuck at GND                                                                                                                ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver|counter:U_counter" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                             ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                                                                                                        ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_serial_controller:U_score_serial_controller|score_dispatcher:U_score_dispatcher"                                                       ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|comparator:U_comparator_parity" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                  ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; a[3] ; Input ; Info     ; Stuck at VCC                                                                                                             ;
+; a[2] ; Input ; Info     ; Stuck at GND                                                                                                             ;
+; a[1] ; Input ; Info     ; Stuck at VCC                                                                                                             ;
+; a[0] ; Input ; Info     ; Stuck at GND                                                                                                             ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|comparator:U_comparator_data" ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                             ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; a[2..1] ; Input ; Info     ; Stuck at GND                                                                                                        ;
+; a[3]    ; Input ; Info     ; Stuck at VCC                                                                                                        ;
+; a[0]    ; Input ; Info     ; Stuck at VCC                                                                                                        ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|counter:U_counter" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                     ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                                                                                                ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UsbPort:U_usb_port"                                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; inputport[5]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; outputport[5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outputport[2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|output_buffer:U_output_buffer|reg:U_reg" ;
++------+-------+----------+-------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                       ;
++------+-------+----------+-------------------------------------------------------------------------------+
+; e    ; Input ; Info     ; Stuck at VCC                                                                  ;
++------+-------+----------+-------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|adder3:U_putAddress" ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                                                                       ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|comparator:U_comparator_full" ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                   ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; b[2..0] ; Input ; Info     ; Stuck at GND                                                                                                                              ;
+; b[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                              ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|comparator:U_comparator_empty" ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                       ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                                                                                                                  ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|reg:U_size" ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                    ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; e    ; Input ; Info     ; Stuck at VCC                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|adder:U_nextSize" ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                         ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                                                                    ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|adder3:U_nextAddress" ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+; a[2..1] ; Input  ; Info     ; Stuck at GND                                                                                                                     ;
+; a[0]    ; Input  ; Info     ; Stuck at VCC                                                                                                                     ;
+; cin     ; Input  ; Info     ; Stuck at GND                                                                                                                     ;
+; cout    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|comparator:U_comparator" ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                  ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; a[3..2] ; Input ; Info     ; Stuck at VCC                                                                                                             ;
+; a[1]    ; Input ; Info     ; Stuck at GND                                                                                                             ;
+; a[0]    ; Input ; Info     ; Stuck at VCC                                                                                                             ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|adder:U_adder" ;
++---------+--------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                       ;
++---------+--------+----------+---------------------------------------------------------------------------------------------------------------+
+; a[3..1] ; Input  ; Info     ; Stuck at GND                                                                                                  ;
+; a[0]    ; Input  ; Info     ; Stuck at VCC                                                                                                  ;
+; cin     ; Input  ; Info     ; Stuck at GND                                                                                                  ;
+; cout    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                           ;
++---------+--------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Jul 02 15:29:30 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off usbport_test -c usbport_test
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/UsbPort.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file key_board_reader.vhd
+    Info (12022): Found design unit 1: key_board_reader-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_board_reader.vhd Line: 16
+    Info (12023): Found entity 1: key_board_reader File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_board_reader.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_decode.vhd
+    Info (12022): Found design unit 1: key_decode-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_decode.vhd Line: 16
+    Info (12023): Found entity 1: key_decode File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_decode.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_scan.vhd
+    Info (12022): Found design unit 1: key_scan-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_scan.vhd Line: 16
+    Info (12023): Found entity 1: key_scan File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_scan.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_control.vhd
+    Info (12022): Found design unit 1: key_control-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_control.vhd Line: 15
+    Info (12023): Found entity 1: key_control File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file multiplexor.vhd
+    Info (12022): Found design unit 1: multiplexor-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/multiplexor.vhd Line: 12
+    Info (12023): Found entity 1: multiplexor File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/multiplexor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
+    Info (12022): Found design unit 1: decoder-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/decoder.vhd Line: 11
+    Info (12023): Found entity 1: decoder File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/decoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
+    Info (12022): Found design unit 1: counter-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/counter.vhd Line: 13
+    Info (12023): Found entity 1: counter File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/counter.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ffd.vhd
+    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/FFD.vhd Line: 14
+    Info (12023): Found entity 1: FFD File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/FFD.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file reg.vhd
+    Info (12022): Found design unit 1: reg-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/reg.vhd Line: 14
+    Info (12023): Found entity 1: reg File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/reg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: comparator-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/comparador.vhd Line: 12
+    Info (12023): Found entity 1: comparator File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/comparador.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
+    Info (12022): Found design unit 1: adder-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/adder.vhd Line: 14
+    Info (12023): Found entity 1: adder File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/full_adder.vhd Line: 14
+    Info (12023): Found entity 1: full_adder File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/full_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/clk_div.vhd
+    Info (12022): Found design unit 1: clk_div-bhv File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/output_files/clk_div.vhd Line: 11
+    Info (12023): Found entity 1: clk_div File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/output_files/clk_div.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file key_board_reader_tb.vhd
+    Info (12022): Found design unit 1: key_board_reader_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_board_reader_tb.vhd Line: 7
+    Info (12023): Found entity 1: key_board_reader_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_board_reader_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoder_tb.vhd
+    Info (12022): Found design unit 1: decoder_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/decoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: decoder_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/decoder_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file multiplexor_tb.vhd
+    Info (12022): Found design unit 1: multiplexor_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/multiplexor_tb.vhd Line: 7
+    Info (12023): Found entity 1: multiplexor_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/multiplexor_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file counter_tb.vhd
+    Info (12022): Found design unit 1: counter_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/counter_tb.vhd Line: 7
+    Info (12023): Found entity 1: counter_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/counter_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_scan_tb.vhd
+    Info (12022): Found design unit 1: key_scan_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_scan_tb.vhd Line: 7
+    Info (12023): Found entity 1: key_scan_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_scan_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_decode_tb.vhd
+    Info (12022): Found design unit 1: key_decode_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_decode_tb.vhd Line: 7
+    Info (12023): Found entity 1: key_decode_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_decode_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file output_buffer.vhd
+    Info (12022): Found design unit 1: output_buffer-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/output_buffer.vhd Line: 17
+    Info (12023): Found entity 1: output_buffer File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/output_buffer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file buffer_control.vhd
+    Info (12022): Found design unit 1: output_buffer_control-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/buffer_control.vhd Line: 15
+    Info (12023): Found entity 1: output_buffer_control File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/buffer_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ring_buffer.vhd
+    Info (12022): Found design unit 1: ring_buffer-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer.vhd Line: 17
+    Info (12023): Found entity 1: ring_buffer File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ring_buffer_control.vhd
+    Info (12022): Found design unit 1: ring_buffer_control-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer_control.vhd Line: 21
+    Info (12023): Found entity 1: ring_buffer_control File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: RAM-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/RAM.vhd Line: 34
+    Info (12023): Found entity 1: RAM File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/RAM.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file memory_address_control.vhd
+    Info (12022): Found design unit 1: memory_address_control-structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/memory_address_control.vhd Line: 18
+    Info (12023): Found entity 1: memory_address_control File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/memory_address_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file adder3.vhd
+    Info (12022): Found design unit 1: adder3-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/adder3.vhd Line: 14
+    Info (12023): Found entity 1: adder3 File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/adder3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file comparator3.vhd
+    Info (12022): Found design unit 1: comparator3-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/comparator3.vhd Line: 12
+    Info (12023): Found entity 1: comparator3 File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/comparator3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file reg3.vhd
+    Info (12022): Found design unit 1: reg3-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/reg3.vhd Line: 14
+    Info (12023): Found entity 1: reg3 File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/reg3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file output_buffer_tb.vhd
+    Info (12022): Found design unit 1: output_buffer_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/output_buffer_tb.vhd Line: 7
+    Info (12023): Found entity 1: output_buffer_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/output_buffer_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ring_buffer_tb.vhd
+    Info (12022): Found design unit 1: ring_buffer_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer_tb.vhd Line: 7
+    Info (12023): Found entity 1: ring_buffer_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_dispatcher.vhd
+    Info (12022): Found design unit 1: lcd_dispatcher-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_dispatcher.vhd Line: 16
+    Info (12023): Found entity 1: lcd_dispatcher File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_dispatcher.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_serial_receiver.vhd
+    Info (12022): Found design unit 1: lcd_serial_receiver-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_receiver.vhd Line: 17
+    Info (12023): Found entity 1: lcd_serial_receiver File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_receiver.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file parity_check.vhd
+    Info (12022): Found design unit 1: parity_check-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/parity_check.vhd Line: 13
+    Info (12023): Found entity 1: parity_check File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/parity_check.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shift_reg.vhd
+    Info (12022): Found design unit 1: shift_reg-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/shift_reg.vhd Line: 13
+    Info (12023): Found entity 1: shift_reg File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/shift_reg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file parity_check_tb.vhd
+    Info (12022): Found design unit 1: parity_check_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/parity_check_tb.vhd Line: 7
+    Info (12023): Found entity 1: parity_check_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/parity_check_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_serial_receiver_tb.vhd
+    Info (12022): Found design unit 1: lcd_serial_receiver_tb-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_receiver_tb.vhd Line: 7
+    Info (12023): Found entity 1: lcd_serial_receiver_tb File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_receiver_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file score_display.vhd
+    Info (12022): Found design unit 1: score_display-structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_display.vhd Line: 33
+    Info (12023): Found entity 1: score_display File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_display.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file dec2hex.vhd
+    Info (12022): Found design unit 1: dec2hex-structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/dec2hex.vhd Line: 27
+    Info (12023): Found entity 1: dec2hex File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/dec2hex.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file ffd_score_display.vhd
+    Info (12022): Found design unit 1: ffd_score_display-logicfunction File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ffd_score_display.vhd Line: 30
+    Info (12023): Found entity 1: ffd_score_display File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ffd_score_display.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file dec_3_8.vhd
+    Info (12022): Found design unit 1: dec_3_8-structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/dec_3_8.vhd Line: 27
+    Info (12023): Found entity 1: dec_3_8 File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/dec_3_8.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file score_dispatcher.vhd
+    Info (12022): Found design unit 1: score_dispatcher-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_dispatcher.vhd Line: 16
+    Info (12023): Found entity 1: score_dispatcher File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_dispatcher.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file serial_control.vhd
+    Info (12022): Found design unit 1: serial_control-Behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/serial_control.vhd Line: 19
+    Info (12023): Found entity 1: serial_control File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/serial_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file score_serial_receiver.vhd
+    Info (12022): Found design unit 1: score_serial_receiver-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_serial_receiver.vhd Line: 17
+    Info (12023): Found entity 1: score_serial_receiver File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_serial_receiver.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_serial_controller.vhd
+    Info (12022): Found design unit 1: lcd_serial_controller-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_controller.vhd Line: 16
+    Info (12023): Found entity 1: lcd_serial_controller File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_controller.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file score_serial_controller.vhd
+    Info (12022): Found design unit 1: score_serial_controller-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_serial_controller.vhd Line: 16
+    Info (12023): Found entity 1: score_serial_controller File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_serial_controller.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file space_invaders.vhd
+    Info (12022): Found design unit 1: space_invaders-Structural File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/space_invaders.vhd Line: 24
+    Info (12023): Found entity 1: space_invaders File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/space_invaders.vhd Line: 4
+Info (12127): Elaborating entity "space_invaders" for the top level hierarchy
+Info (12128): Elaborating entity "key_board_reader" for hierarchy "key_board_reader:U_key_board_reader" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/space_invaders.vhd Line: 103
+Info (12128): Elaborating entity "key_decode" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_board_reader.vhd Line: 61
+Info (12128): Elaborating entity "clk_div" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|clk_div:U_clk_div" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_decode.vhd Line: 53
+Info (12128): Elaborating entity "key_scan" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_decode.vhd Line: 59
+Info (12128): Elaborating entity "counter" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_scan.vhd Line: 49
+Info (12128): Elaborating entity "adder" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|adder:U_adder" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/counter.vhd Line: 48
+Info (12128): Elaborating entity "full_adder" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|adder:U_adder|full_adder:U0" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/adder.vhd Line: 30
+Info (12128): Elaborating entity "comparator" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|comparator:U_comparator" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/counter.vhd Line: 51
+Info (12128): Elaborating entity "reg" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|reg:U_reg" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/counter.vhd Line: 56
+Info (12128): Elaborating entity "FFD" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|counter:U_counter|reg:U_reg|FFD:U0" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/reg.vhd Line: 28
+Info (12128): Elaborating entity "decoder" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|decoder:U_decoder" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_scan.vhd Line: 59
+Info (12128): Elaborating entity "multiplexor" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_scan:U_key_scan|multiplexor:U_multiplexor" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_scan.vhd Line: 68
+Info (12128): Elaborating entity "key_control" for hierarchy "key_board_reader:U_key_board_reader|key_decode:U_key_decode|key_control:U_key_control" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_decode.vhd Line: 72
+Info (12128): Elaborating entity "ring_buffer" for hierarchy "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_board_reader.vhd Line: 72
+Info (12128): Elaborating entity "ring_buffer_control" for hierarchy "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|ring_buffer_control:U_ring_buffer_control" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer.vhd Line: 67
+Info (12128): Elaborating entity "RAM" for hierarchy "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|RAM:U_ram" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at RAM.vhd(43): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/RAM.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at RAM.vhd(46): signal "din" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/RAM.vhd Line: 46
+Info (12128): Elaborating entity "memory_address_control" for hierarchy "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/ring_buffer.vhd Line: 73
+Info (12128): Elaborating entity "adder3" for hierarchy "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|adder3:U_nextAddress" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/memory_address_control.vhd Line: 81
+Info (12128): Elaborating entity "reg3" for hierarchy "key_board_reader:U_key_board_reader|ring_buffer:U_ring_buffer|memory_address_control:U_memory_address_control|reg3:U_getAddress" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/memory_address_control.vhd Line: 84
+Info (12128): Elaborating entity "output_buffer" for hierarchy "key_board_reader:U_key_board_reader|output_buffer:U_output_buffer" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/key_board_reader.vhd Line: 84
+Info (12128): Elaborating entity "output_buffer_control" for hierarchy "key_board_reader:U_key_board_reader|output_buffer:U_output_buffer|output_buffer_control:U_output_buffer_control" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/output_buffer.vhd Line: 47
+Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:U_usb_port" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/space_invaders.vhd Line: 116
+Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/UsbPort.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/UsbPort.vhd Line: 80
+Info (12133): Instantiated megafunction "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/UsbPort.vhd Line: 80
+    Info (12134): Parameter "lpm_type" = "sld_virtual_jtag"
+    Info (12134): Parameter "sld_auto_instance_index" = "YES"
+    Info (12134): Parameter "sld_instance_index" = "0"
+    Info (12134): Parameter "sld_ir_width" = "8"
+    Info (12134): Parameter "sld_sim_action" = "UNUSED"
+    Info (12134): Parameter "sld_sim_n_scan" = "0"
+    Info (12134): Parameter "sld_sim_total_length" = "0"
+Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
+Info (12131): Elaborated megafunction instantiation "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst", which is child of megafunction instantiation "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
+Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12131): Elaborated megafunction instantiation "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:U_usb_port|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "lcd_serial_controller" for hierarchy "lcd_serial_controller:U_lcd_serial_controller" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/space_invaders.vhd Line: 122
+Info (12128): Elaborating entity "lcd_dispatcher" for hierarchy "lcd_serial_controller:U_lcd_serial_controller|lcd_dispatcher:U_lcd_dispatcher" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_controller.vhd Line: 48
+Info (12128): Elaborating entity "lcd_serial_receiver" for hierarchy "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_controller.vhd Line: 51
+Info (12128): Elaborating entity "serial_control" for hierarchy "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|serial_control:U_serial_control" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_receiver.vhd Line: 74
+Info (12128): Elaborating entity "parity_check" for hierarchy "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|parity_check:U_parity_check" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_receiver.vhd Line: 79
+Info (12128): Elaborating entity "shift_reg" for hierarchy "lcd_serial_controller:U_lcd_serial_controller|lcd_serial_receiver:U_lcd_serial_receiver|shift_reg:U_shift_reg" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/lcd_serial_receiver.vhd Line: 91
+Info (12128): Elaborating entity "score_serial_controller" for hierarchy "score_serial_controller:U_score_serial_controller" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/space_invaders.vhd Line: 133
+Info (12128): Elaborating entity "score_dispatcher" for hierarchy "score_serial_controller:U_score_serial_controller|score_dispatcher:U_score_dispatcher" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_serial_controller.vhd Line: 47
+Info (12128): Elaborating entity "score_serial_receiver" for hierarchy "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_serial_controller.vhd Line: 50
+Warning (12125): Using design file shift_reg_7.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: shift_reg_7-behavioral File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/shift_reg_7.vhd Line: 13
+    Info (12023): Found entity 1: shift_reg_7 File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/shift_reg_7.vhd Line: 4
+Info (12128): Elaborating entity "shift_reg_7" for hierarchy "score_serial_controller:U_score_serial_controller|score_serial_receiver:U_score_serial_receiver|shift_reg_7:U_shift_reg" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_serial_receiver.vhd Line: 91
+Info (12128): Elaborating entity "score_display" for hierarchy "score_display:U_score_display" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/space_invaders.vhd Line: 147
+Info (12128): Elaborating entity "dec_3_8" for hierarchy "score_display:U_score_display|dec_3_8:decoder" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_display.vhd Line: 77
+Info (12128): Elaborating entity "dec2hex" for hierarchy "score_display:U_score_display|dec2hex:\circuit_gen:0:hex_digit" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_display.vhd Line: 82
+Info (12128): Elaborating entity "ffd_score_display" for hierarchy "score_display:U_score_display|ffd_score_display:clear_reg" File: C:/Users/João Silva/Downloads/SpaceInvaders/hardware/score_display.vhd Line: 85
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2024.07.02.15:29:42 Progress: Loading sld8657cc4d/alt_sld_fab_wrapper_hw.tcl
+Error (11176): Factory com.altera.sopcmodel.components.tclmodule.TclModuleFactory reading C:/Users/João Silva/Downloads/SpaceInvaders/hardware/db/ip/sld8657cc4d/alt_sld_fab_wrapper_hw.tcl exception com.altera.utilities.FileUtilities$AlteraIpException: C:\Users\João Silva\Downloads\SpaceInvaders\hardware\db\ip\sld8657cc4d\alt_sld_fab_wrapper_hw.tcl
+Error (11176): No component alt_sld_fab in C:/Users/João Silva/Downloads/SpaceInvaders/hardware/db/ip/sld8657cc4d/alt_sld_fab_wrapper_hw.tcl
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Error (10002): Can't open VHDL or Verilog HDL file "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/"
+Info (12021): Found 0 design units, including 0 entities, in source file 
+Info (15248): File "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" is a duplicate of already analyzed file "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file 
+Info (15248): File "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" is a duplicate of already analyzed file "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file 
+Info (15248): File "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" is a duplicate of already analyzed file "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file 
+Info (15248): File "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" is a duplicate of already analyzed file "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file 
+Info (15248): File "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" is a duplicate of already analyzed file "C:/Users/João Silva/Downloads/SpaceInvaders/hardware/" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file 
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 5 warnings
+    Error: Peak virtual memory: 4780 megabytes
+    Error: Processing ended: Tue Jul 02 15:29:43 2024
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:20
+
+
